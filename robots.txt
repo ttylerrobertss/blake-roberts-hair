@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ttylerrobertss.github.io/blake-roberts-hair/sitemap.xml
+Sitemap: https://hairbyblake.com/sitemap.xml
