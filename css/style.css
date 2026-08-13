@@ -275,6 +275,7 @@ a { color: inherit; }
 }
 .press-slide__mark span {
   position: absolute;
+  top: 50%;
   font-family: var(--display);
   font-weight: 700;
   text-transform: uppercase;
@@ -282,10 +283,11 @@ a { color: inherit; }
   white-space: nowrap;
   letter-spacing: 0.02em;
   line-height: 1;
+  font-size: clamp(1.6rem, 5vw, 3.2rem);
 }
-.press-slide__mark span:nth-child(1) { font-size: clamp(1.6rem, 5vw, 3.4rem); transform: rotate(-90deg) translateX(-38%); left: 30%; }
-.press-slide__mark span:nth-child(2) { font-size: clamp(1.6rem, 5vw, 3.4rem); transform: rotate(-90deg) translateX(8%); left: 30%; }
-.press-slide__mark span:nth-child(3) { font-size: clamp(1.6rem, 5vw, 3.4rem); transform: rotate(90deg) translateX(38%); left: 68%; }
+.press-slide__mark span:nth-child(1) { left: 13%; top: 44%; transform: translate(-50%, -50%) rotate(-90deg); }
+.press-slide__mark span:nth-child(2) { left: 50%; top: 60%; transform: translate(-50%, -50%) rotate(-90deg); }
+.press-slide__mark span:nth-child(3) { left: 85%; top: 38%; transform: translate(-50%, -50%) rotate(90deg); }
 .press-slide__label {
   position: absolute;
   writing-mode: vertical-rl;
