@@ -280,13 +280,77 @@ a { color: inherit; }
 /* Contact */
 .contact a { text-decoration: none; border-bottom: 1px solid var(--line); }
 
+/* Card grid variant */
+.card-grid--2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+/* FAQ list */
+.faq-list {
+  margin-top: 2.5em;
+  border-top: 1px solid var(--line);
+  max-width: 760px;
+}
+.faq-item {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.faq-item h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.faq-item p { margin: 0; }
+#extensions .btn-row { margin-top: 2.5em; align-items: center; }
+.extensions-more { align-self: center; }
+
 /* Footer */
 .site-footer {
+  background: var(--ink);
+  color: var(--bg);
+  padding-top: 0;
+  overflow: hidden;
+}
+.footer-marquee {
+  background: rgba(244, 241, 234, 0.06);
+  color: var(--gold-soft);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  padding: 8px 0;
+}
+.footer-marquee__track {
+  display: inline-flex;
+  animation: scroll-left 18s linear infinite;
+}
+.footer-marks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 8vw, 88px);
+  padding: clamp(48px, 8vw, 88px) 24px;
+  flex-wrap: wrap;
+}
+.mark { filter: invert(1); opacity: 0.94; }
+.mark--monogram { height: clamp(56px, 8vw, 84px); width: auto; }
+.mark--squiggle { height: clamp(34px, 5vw, 48px); width: auto; }
+.mark--badge { height: clamp(72px, 10vw, 108px); width: auto; }
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding: 0 24px 28px;
+  font-size: 0.85rem;
+}
+.footer-links a { text-decoration: none; border-bottom: 1px solid rgba(244, 241, 234, 0.3); }
+.footer-copyright {
   text-align: center;
-  padding: 28px;
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  border-top: 1px solid var(--line);
+  padding: 20px 24px 32px;
+  font-size: 0.76rem;
+  color: rgba(244, 241, 234, 0.6);
+  border-top: 1px solid rgba(244, 241, 234, 0.12);
+  margin: 0 24px;
 }
 
 /* Responsive */
