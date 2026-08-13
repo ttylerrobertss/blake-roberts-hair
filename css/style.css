@@ -150,6 +150,21 @@ a { color: inherit; }
 .btn--ghost { background: transparent; border: 1px solid var(--ink); color: var(--ink); }
 .btn--ghost-dark { background: transparent; border: 1px solid var(--bg); color: var(--bg); }
 
+/* Values strip */
+.values-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 56px);
+  padding: 22px clamp(20px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold-dark);
+}
+
 /* Sections */
 .section { padding: clamp(56px, 9vw, 100px) clamp(20px, 5vw, 56px); }
 .section--tint { background: var(--bg-tint); }
