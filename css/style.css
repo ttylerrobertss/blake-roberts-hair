@@ -330,7 +330,7 @@ a { color: inherit; }
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
-  border: 6px solid var(--stamp);
+  border: 6px solid var(--bg);
 }
 .collage__circle img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .collage__label {
