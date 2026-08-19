@@ -69,24 +69,24 @@ a { color: inherit; }
   z-index: 50;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
   padding: 18px clamp(20px, 5vw, 56px);
   background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 .brand {
-  order: 1;
-  flex: 1;
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.3rem;
   text-decoration: none;
   color: var(--ink);
 }
-.header-book { order: 2; }
 .nav-toggle {
-  order: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -94,6 +94,9 @@ a { color: inherit; }
   border: none;
   cursor: pointer;
   padding: 6px;
+}
+@media (min-width: 860px) {
+  .site-header--home .nav-toggle { visibility: hidden; pointer-events: none; }
 }
 .nav-toggle span {
   width: 22px;
