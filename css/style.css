@@ -304,54 +304,6 @@ a { color: inherit; }
 }
 .photo-frame--wide { aspect-ratio: 3/2; }
 
-/* Circle collage */
-.collage {
-  position: relative;
-  background: var(--ink);
-  overflow: hidden;
-  min-height: clamp(380px, 58vw, 640px);
-}
-.collage__bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(1) contrast(1.05);
-  opacity: 0.92;
-}
-.collage__circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: clamp(220px, 34vw, 380px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
-  border: 6px solid var(--bg);
-}
-.collage__circle img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.collage__label {
-  position: absolute;
-  left: clamp(20px, 5vw, 56px);
-  bottom: clamp(20px, 5vw, 56px);
-  color: var(--bg);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.collage__cta {
-  position: absolute;
-  right: clamp(20px, 5vw, 56px);
-  bottom: clamp(20px, 5vw, 56px);
-}
-@media (max-width: 560px) {
-  .collage__cta { right: 50%; transform: translateX(50%); bottom: 20px; }
-}
-
 /* Photo diptych — umber frame with a rotated blue "Blake Roberts" stamp */
 .diptych {
   --umber: #4a3f2f;
