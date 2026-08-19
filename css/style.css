@@ -522,3 +522,6 @@ a { color: inherit; }
 @media (max-width: 480px) {
   .brand { font-size: 1.1rem; }
 }
+@media (max-width: 640px) {
+  .photo-frame { max-width: 260px; margin: 0 auto; }
+}
