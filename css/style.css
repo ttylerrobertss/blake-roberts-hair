@@ -220,9 +220,30 @@ a { color: inherit; }
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(180deg, rgba(23,20,15,0.15) 0%, rgba(23,20,15,0.05) 40%, rgba(23,20,15,0.75) 100%);
 }
-.hero--photo .hero__inner { position: relative; max-width: 640px; margin: 0; }
+.hero--photo .hero__inner { position: relative; z-index: 2; max-width: 640px; margin: 0; }
+
+/* Video layer — sits over the photo (which stays as the fallback background) */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero__video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 */
+  min-height: 100%;
+  min-width: 177.78vh; /* 16:9 */
+  transform: translate(-50%, -50%);
+  border: 0;
+}
 .hero--photo .eyebrow { color: #d9cba3; }
 .hero--photo .hero__sub { color: rgba(244,241,234,0.88); }
 .hero--photo .btn { border-color: var(--bg); color: var(--bg); }
