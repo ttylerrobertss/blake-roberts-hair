@@ -93,9 +93,6 @@ a { color: inherit; }
   cursor: pointer;
   padding: 6px;
 }
-@media (min-width: 860px) {
-  .site-header--home .nav-toggle { visibility: hidden; pointer-events: none; }
-}
 .nav-toggle span {
   width: 22px;
   height: 2px;
@@ -142,25 +139,26 @@ a { color: inherit; }
   .nav { flex-direction: column; gap: 26px; }
 }
 
-/* Hero nav overlay — mirrors the reference's permanent sidebar-on-photo list */
-.hero__nav {
-  display: none;
-  position: absolute;
-  top: clamp(28px, 6vw, 56px);
-  left: clamp(20px, 5vw, 56px);
-  z-index: 2;
-  gap: clamp(28px, 4vw, 48px);
-}
-.hero__nav .nav__label { color: #d9cba3; }
-.hero__nav a {
-  text-decoration: none;
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
-  color: var(--bg);
-}
-.hero__nav a:hover { color: #d9cba3; }
+/* Desktop — classic top links, hamburger only below 860px */
 @media (min-width: 860px) {
-  .hero__nav { display: flex; }
+  .nav-toggle { display: none; }
+  .brand { order: 1; flex: none; text-align: left; }
+  .nav {
+    order: 2;
+    display: flex;
+    position: static;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 28px;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  .nav__group { flex-direction: row; gap: 28px; min-width: 0; }
+  .nav__label, .nav__group:last-child { display: none; }
+  .nav a { font-size: 0.88rem; letter-spacing: 0.02em; }
+  .header-book { order: 3; }
 }
 
 /* Buttons — square, outline, no fill */
