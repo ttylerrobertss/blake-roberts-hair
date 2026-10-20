@@ -14,3 +14,24 @@ siteNav.querySelectorAll("a").forEach((link) => {
     navToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+// Hero video: stay hidden (photo shows) until it is actually playing, so
+// YouTube's play button, title, and spinner never appear.
+const heroVideo = document.getElementById("heroVideo");
+if (heroVideo) {
+  const layer = heroVideo.parentElement;
+  window.onYouTubeIframeAPIReady = () => {
+    new YT.Player(heroVideo, {
+      events: {
+        onReady: (e) => { e.target.mute(); e.target.playVideo(); },
+        onStateChange: (e) => {
+          if (e.data === YT.PlayerState.PLAYING) layer.classList.add("is-playing");
+          if (e.data === YT.PlayerState.ENDED) e.target.playVideo();
+        },
+      },
+    });
+  };
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+}
