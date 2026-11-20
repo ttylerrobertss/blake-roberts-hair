@@ -300,6 +300,10 @@ a { color: inherit; }
   align-items: center;
   margin-bottom: clamp(56px, 9vw, 96px);
 }
+@media (min-width: 821px) {
+  .offer-feature--flip { grid-template-columns: 0.85fr 1fr; }
+  .offer-feature--flip .offer-feature__photo { order: -1; }
+}
 .offer-feature__copy h3 {
   font-family: var(--serif);
   font-size: clamp(1.7rem, 3.2vw, 2.4rem);
